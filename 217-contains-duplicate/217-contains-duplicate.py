@@ -1,9 +1,10 @@
-class Solution(object):
-    def containsDuplicate(self, nums):
-        map = {}
+class Solution:
+    def containsDuplicate(self, nums: List[int]) -> bool:
+        dups = {}
         for i, n in enumerate(nums):
-            if n in map:
+            if n in dups:
                 return True
             else:
-                map[n] = i
+                dups[n] = i
             
+        
